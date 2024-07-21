@@ -1,5 +1,8 @@
 package cleancode.minesweeper.tobe;
 
+import cleancode.minesweeper.tobe.io.ConsoleInputHandler;
+import cleancode.minesweeper.tobe.io.ConsoleOutputHandler;
+
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -12,6 +15,9 @@ public class MineSweeper {
     public static final int LAND_MINE_COUNT = 10;
 
     private int gameStatus = 0; // 0: 게임 중, 1: 승리, -1: 패배
+
+    private final ConsoleInputHandler consoleInputHandler = new ConsoleInputHandler();
+    private final ConsoleOutputHandler consoleOutputHandler = new ConsoleOutputHandler();
 
     public void run() {
         showGameStartComments();
